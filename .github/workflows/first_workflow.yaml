@@ -1,8 +1,10 @@
 name: first_workflow
 on: 
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: 
+      - check-out
+    types: 
+      - completed
 jobs:
   validate:
     runs-on: ubuntu-latest
