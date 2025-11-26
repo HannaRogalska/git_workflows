@@ -7,7 +7,19 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Command in Multiline
+      - name: Display Node version on Ubuntu
         run: node -v
+  validate-on-Window:
+    runs-on: windows-latest
+    steps:
+      - name: Display Node version on windows
+        run: node -v
+  validate-after-ubuntu:
+    needs: validate
+    runs-on: macos-latest
+    steps:
+      - name: Display Node version on os
+        run: node -v
+  
       
 
