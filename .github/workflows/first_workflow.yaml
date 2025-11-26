@@ -1,0 +1,13 @@
+name: first_workflow
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Command in Multiline
+        run: node -v
+      
+
