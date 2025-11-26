@@ -1,0 +1,10 @@
+name: check-out
+on:
+  - push
+jobs: 
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: List files and copy repo
+        run: ls -a
