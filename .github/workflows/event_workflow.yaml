@@ -1,0 +1,13 @@
+name: event
+
+on: [push, issues, pull_request]
+
+jobs:
+  instal-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event vars
+        run: |
+            echo $GITHUB_SHA
+            echo $	GITHUB_REF
+    
