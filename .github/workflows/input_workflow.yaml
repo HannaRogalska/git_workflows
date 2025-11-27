@@ -1,0 +1,19 @@
+name: input
+
+on:
+  workflow_dispatch:
+    inputs:
+     castomChoice:
+        description: "Choice"
+        required: true
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+jobs:
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo ${{inputs.castomChoice}}
