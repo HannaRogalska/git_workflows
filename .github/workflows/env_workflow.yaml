@@ -6,6 +6,7 @@ env:
 jobs:
   run-first-command: 
     runs-on: ubuntu-latest
+    environment: "production"
     steps:
       - name: show env
         run: | 
