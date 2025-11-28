@@ -10,3 +10,6 @@ jobs:
       - name: show env
         run: | 
           echo $WF_CASTOM_ENV
+          echo ${{vars.STATUS}}
+          echo ${{secrets.PASSWORD}}
+          
