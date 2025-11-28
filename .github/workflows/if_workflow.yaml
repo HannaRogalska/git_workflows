@@ -1,0 +1,24 @@
+name: if
+
+on: [push]
+run-name: if-variable
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: sleep 30
+      - name: runs on canceled
+        if: ${{cancelled()}}
+        run: echo "runs canceled"
+      - name: runs on any case
+        if: ${{always()}}
+        run: echo "runs on any case"
+      - name: runs on success
+        if: ${{success()}}
+        run: echo "runs on success"
+      - name: runs on failed
+        if: ${{failure()}}
+        run: echo "runs on failed"
+      
