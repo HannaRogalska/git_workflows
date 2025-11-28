@@ -1,0 +1,12 @@
+name: Env workflow
+
+on: [push]
+env:
+  WF_CASTOM_ENV: 1
+jobs:
+  run-first-command: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: show env
+        run: | 
+          echo $WF_CASTOM_ENV
